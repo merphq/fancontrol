@@ -1,0 +1,19 @@
+[project]
+name = "fancontrol"
+version = "0.1.0"
+description = "Simple fan control module for IPMI-compatible systems like Dell R730"
+authors = [
+    { name="Mike Munro", email="mike@saltshaker.io" }
+]
+dependencies = [
+    "loguru>=0.7.0"
+]
+readme = "README.md"
+license = {text = "MIT"}
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["fancontrol"]
