@@ -1,5 +1,7 @@
 # fancontrol/control.py
 import subprocess
+import logging
+logger = logging.getLogger(__name__)
 
 
 def set_manual_fan_control():
