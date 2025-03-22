@@ -13,8 +13,8 @@ def set_fan_speed(percent: int):
         raise ValueError("Fan speed must be between 0 and 100")
 
     raw_value = int(255 * (percent / 100))  # 0–255
-    logger.info(f"[FanControl] Raw fan hex: 0x{raw_value:02x}")
-    subprocess.run(["ipmitool", "raw", "0x30", "0x30", "0x02", "0xff", str(raw_value)], check=True)
+    hex_value = f"0x{raw_value:02x}"        # e.g., '0x64'
+    subprocess.run(["ipmitool", "raw", "0x30", "0x30", "0x02", "0xff", hex_value], check=True)
 
 
 
